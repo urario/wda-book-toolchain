@@ -1,0 +1,13 @@
+{
+  "name": "review-toolchain",
+  "private": true,
+  "description": "textlint and rules for Re:VIEW manuscripts",
+  "license": "MIT",
+  "dependencies": {
+    "textlint": "15.8.0",
+    "textlint-plugin-review": "0.4.1",
+    "textlint-rule-preset-ja-technical-writing": "12.0.2",
+    "textlint-rule-prh": "6.1.0",
+    "textlint-filter-rule-comments": "1.3.0"
+  }
+}

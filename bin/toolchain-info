@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# イメージに入っているツールの版を一覧にする。
+set -euo pipefail
+echo "toolchain $(cat /opt/toolchain/VERSION)"
+echo "ruby $(ruby -e 'print RUBY_VERSION')"
+echo "review $(cd /opt/toolchain && bundle exec review version)"
+echo "node $(node -v)"
+echo "textlint $(textlint --version)"
+echo "uplatex $(uplatex --version | head -1)"
+echo "lualatex $(lualatex --version | head -1)"
+echo "plantuml $(java -jar /opt/plantuml/plantuml.jar -version | head -1)"
+echo "epubcheck $(java -jar /opt/epubcheck/epubcheck.jar --version 2>&1 | head -1)"
+echo "drawio $(cat /opt/drawio/resources/app.asar.version 2>/dev/null || echo "${DRAWIO_VERSION:-unknown}")"
+echo "java $(java -version 2>&1 | head -1)"
+echo "graphviz $(dot -V 2>&1)"

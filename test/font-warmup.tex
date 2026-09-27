@@ -1,0 +1,13 @@
+% イメージのビルド時に、組版で使うフォントをすべて一度読み込んで
+% luaotfloadのキャッシュ（TEXMFCACHE）を作る。組版のたびに作り直すのを避けるため。
+\documentclass{jlreq}
+\usepackage{luatexja-fontspec}
+\setmainfont{Noto Serif}[BoldFont={Noto Sans Bold}]
+\setsansfont{Noto Sans}
+\setmonofont{Noto Sans Mono CJK JP}[BoldFont={Noto Sans Mono CJK JP Bold}]
+\setmainjfont{Noto Serif CJK JP}[BoldFont={Noto Sans CJK JP Bold}]
+\setsansjfont{Noto Sans CJK JP}[BoldFont={Noto Sans CJK JP Bold}]
+\setmonojfont{Noto Sans Mono CJK JP}[BoldFont={Noto Sans Mono CJK JP Bold}]
+\begin{document}
+本文 Text \textbf{太字 Bold} {\sffamily 見出し Sans \bfseries 太字} {\ttfamily コード code \bfseries 太字}
+\end{document}
